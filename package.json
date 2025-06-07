@@ -1,0 +1,16 @@
+{
+  "name": "videotube",
+  "version": "1.0.0",
+  "description": "Backend Level Project - Youtube",
+  "keywords": [
+    "Javascript",
+    "Node"
+  ],
+  "license": "ISC",
+  "author": "Sahil Ghorpade",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

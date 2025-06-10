@@ -1,0 +1,27 @@
+7------------------------------------------
+1 npm init , creation of all folders and  Installation of prettier
+
+8---------------------------------------------------
+-connection of database and names in constants.js
+-intall mongosse , express env  and (about dotenv importing)
+-connection of mongoose in index.js
+-the Alternate method in db folder -> index.js
+-importing of dot env method and also using it (generally for allocating the environment variables and how to use it(changing the config in the packeage.json file))
+
+
+9----------------------------------------------------------------------
+
+-import express in that
+-intall of cors and cookieparser & import in app.js
+-about cors objects 
+-all app.use comnfigyration 
+-did about the APi handling and added 3 files in utils folder
+
+
+10--------------------------------------------------------------------------
+-creation of the Models user and video
+-Installation of mongoose aggregate paginate plugin and also bcrypt , JWT 
+-usage of pre middleware also its documents  in user Model
+-used the refresh and access tokens its generation and its expiry 
+
+

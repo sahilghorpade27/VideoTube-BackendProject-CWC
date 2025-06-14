@@ -25,3 +25,13 @@
 -used the refresh and access tokens its generation and its expiry 
 
 
+11------------------------------------------------------------------------ 
+- multer config done 
+- middleware written in the multer.middleware 
+- cloudinary file done to see (Adding the local path first to the server and then then the
+
+
+12--------------------------------------------------------------------------
+- written and tested the basic route of the register route 
+- checked the postman output 
+- from the user controller

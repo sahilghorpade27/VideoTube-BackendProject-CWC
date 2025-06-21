@@ -91,7 +91,7 @@ const registerUser = asyncHandler(async(req,res)=> {
         fullName,
         avatar : avatar.url ,
         coverImage : coverImage?.url|| "" ,
-        email ,
+        email : email.toLowerCase() ,
         password ,
         username : username.toLowerCase()
 
@@ -124,15 +124,15 @@ const loginUser = asyncHandler(async (req,res)=> {
     const {email , username , password } = req.body ;
     
     //username aur email 
-    if(! username || !email){
-        throw new ApiError(400,"Username or Password is required")
+    if(! username && !email){
+        throw new ApiError(400,"Username or Email is required")
     } 
     //find the user 
-    const user = User.findOne({
+    const user = await User.findOne({
         $or: [{username} , {email}]
     })
     if(!user){
-        throw ApiError(400,"User not found !! ");
+        throw new ApiError(400,"User not found !! ");
     }
     // password check 
     const isPasswordValid = await user.isPasswordCorrect(password) ;
@@ -161,7 +161,7 @@ const loginUser = asyncHandler(async (req,res)=> {
 
 
 const logoutUser = asyncHandler(async (req,res) => {
-    User.findByIdAndUpdate(
+    await User.findByIdAndUpdate(
         req.user._id,{
             $set : {
                 refreshToken : undefined 
